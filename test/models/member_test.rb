@@ -15,7 +15,7 @@ class MemberTest < ActiveSupport::TestCase
  		assert_not @member.valid?
   end
  test "name should not be short" do
-    @member.name = "a"*4
+    @member.name = "a"*1
     assert_not @member.valid?
  end
 

@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20150317085724) do
     t.datetime "updated_at",      null: false
   end
 
-  add_index "members", ["name"], name: "index_members_on_name"
+  add_index "members", ["name"], name: "index_members_on_name", unique: true
 
   create_table "posts", force: :cascade do |t|
     t.string   "name"
