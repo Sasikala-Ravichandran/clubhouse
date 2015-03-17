@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
 
    before_action :set_member, only: [:show, :edit, :update, :destroy]
-
+   before_action :logged_in_member, only: [:show, :edit, :update]
 def index
 	@members = Member.all
 end
@@ -44,7 +44,12 @@ end
 
  
 private 
-
+def logged_in_member
+   unless logged_in?
+   	flash[:danger] = "Please log in"
+   	redirect_to login_path
+   end
+end
 def set_member
    @member = Member.find(params[:id])
 end
