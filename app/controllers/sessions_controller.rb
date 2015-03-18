@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
    		if params[:session][:remember_me] == '1'
    			remember(member)
    		end
-  		redirect_to member
+  		redirect_to posts_path
   	else
   		flash.now[:danger] = 'Invalid email/password combination'
   		render 'new'
@@ -20,6 +20,6 @@ class SessionsController < ApplicationController
   def destroy
   	logout if logged_in?
   	flash.now[:notice] = "Successfully logged out"
-  	redirect_to members_path
+  	redirect_to clubhouse_path
   end
 end
