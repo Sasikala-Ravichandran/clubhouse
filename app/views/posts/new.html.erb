@@ -1,8 +1,10 @@
- <%= form_for @post do |f| %>
- <%= f.label :name %>
- <%= f.text_field :name %> 
+<%= form_for @post do |f| %>
+  
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
- <%= f.label :text %> 
- <%= f.text_area :text %>
- <%= f.submit %> 
- <% end %>
+  <%= f.label :text %>
+  <%= f.text_area :text %>
+
+  <%= f.submit %> 
+<% end %>

@@ -1,8 +1,8 @@
 <% if @member.errors.any? %>
-<%= pluralize(@member.errors.count, "error")%>
-<ul>
-<% @member.errors.full_messages.each do |msg| %>
-<li><%= msg %></li>
-<% end %>
-</ul>
+  <%= pluralize(@member.errors.count, "error")%>
+  <ul>
+    <% @member.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
 <% end %>

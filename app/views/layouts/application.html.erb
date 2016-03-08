@@ -3,14 +3,12 @@
 <head>
   <title>Clubhouse</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-   
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% flash.each do |message_type, message| %>
+  <% flash.each do |message_type, message| %>
     <%= message %> 
- <% end %>
-<%= yield %>
-
+  <% end %>
+  <%= yield %>
 </body>
 </html>
